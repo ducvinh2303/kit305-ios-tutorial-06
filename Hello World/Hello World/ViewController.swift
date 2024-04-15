@@ -18,11 +18,15 @@ class ViewController: UIViewController {
             preferredStyle: UIAlertController.Style.alert)
         
         // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { evt in
+            print("got to part 2")
+            print("some more things")
+            print(evt)
+        }))
 
         // show the alert
         self.present(alert, animated: true, completion: nil)
         
-        
+        print("got to this part")
     }
 }
